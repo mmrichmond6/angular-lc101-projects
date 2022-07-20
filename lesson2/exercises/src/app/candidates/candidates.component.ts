@@ -24,7 +24,14 @@ export class CandidatesComponent implements OnInit {
   }
 
   // Code the addToCrew function here:
-
+  addToCrew(person: object) {
+    let errorMsg = '';
+    if (this.crew.includes(person)) {
+      errorMsg = `${person} is already in your crew list.`;
+    } else {
+      this.crew.push(person);
+    }
+  }
 
   // BONUS: Code the changeMissionName function here:
 
